@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title> The RPG</title>
+</head>
+
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center">
+
+        <div class="password-generator-container d-flex align-items-center flex-column gap-2">
+
+            <div class="d-flex align-items-center flex-column gap-3">
+                <h6 class="capitalize">Password Generator</h6>
+                <div class="password-container">
+                    <h3 id="pswrd" class="pswrd py-3 px-4 d-flex justify-content-between align-items-center">P4$5W0rD!
+                        <i onclick="iconChanger()" class="fa-regular fa-copy" data-bs-toggle="tooltip" title="Copy!"> </i>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="password-chracteristics-container d-flex flex-column align-items-start py-4 px-4 gap-3">
+
+                <label class="pswrd-length d-flex justify-content-between" for="pswrd-length">Character Length
+                    <span id="length">8</span>
+                </label>
+                <input type="range" class="form-range" min="8" max="18" step="1" value=0 id="customRange3">
+
+                <div>
+                    <input onclick="randUpLetters()" type="checkbox" name="uppercase" id="uppercase" aria-checked="no">
+                    <label for="uppercase">Include Uppercase Letters</label>
+                </div>
+                <div>
+                    <input onclick="randLpLetters()" type="checkbox" name="lowercase" id="lowercase" aria-checked="no">
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+                <div>
+                    <input onclick="randNumbers()" type="checkbox" name="numbers" id="numbers" aria-checked="no">
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div>
+                    <input onclick="randSymbols()" type="checkbox" name="symbols" id="symbols" aria-checked="no">
+                    <label for="symbols">Include Symbols</label>
+                </div>
+
+                <div class="strength d-flex justify-content-between py-3 px-4">
+                    <h6 class="text-uppercase gap-2">Strength</h6>
+                    <div class="strength-meter d-flex align-items-center"></div>
+                </div>
+
+                <button class="btn btn-primary text-uppercase d-flex justify-content-center align-items-center gap-1"
+                    onclick="generatePassword()" >generate
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg></button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
